@@ -9,11 +9,10 @@ function ready(){
                 console.log(this.value)
                 let elem = document.createElement('li');
                 elem.innerHTML = this.value;
-                list.append(elem);
-
-                control.onclick(() => {
-                    str.strike        
-                });
+                elem.onclick = function() {
+                    this.style.textDecoration = 'line-through'
+                }
+                list.append(elem);     
             } else {
                 
             }
